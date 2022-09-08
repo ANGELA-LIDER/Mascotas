@@ -30,11 +30,11 @@ header nav{
     color: #fefefe;
     height: 4rem;
     font-size: 30px;
-    /*display activa las opciones de justificado*/
+    /*display activa las opciones del justificado*/
     display: flex;
-    /*aling centra verticalmente*/
+    /*aligh centra vertical*/
     align-items: center;
-    /*aling centra horizontal*/
+    /*centra horizontal*/
     justify-content: center;
 }
 
@@ -85,7 +85,6 @@ label{
     height: 1.5rem;
 }
 
-
 .main-button{
     border: 0px;
     border-radius: 10rem;
@@ -103,16 +102,8 @@ label{
     /*font-weight: 900;*/
     cursor: pointer;
 }
-
-#Centrado{
-text-align: center;
-
-}
-
-select{
-    border: 0px;
-    border-radius: 00.25rem;
-    font-weight: 500;
-    width: 475px;
-    height: 1.5rem;    
+#centrado{
+    text-align: center ;
+    height: 50px;
+    border-radius: 10rem;
 }

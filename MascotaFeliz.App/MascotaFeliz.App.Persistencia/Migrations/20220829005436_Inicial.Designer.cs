@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MascotaFeliz.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20220828065712_Inicial")]
+    [Migration("20220829005436_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -55,7 +55,7 @@ namespace MascotaFeliz.App.Persistencia.Migrations
                     b.Property<int?>("HistoriaId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Nombre")
+                    b.Property<string>("Nombres")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Raza")
@@ -82,21 +82,21 @@ namespace MascotaFeliz.App.Persistencia.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int>("Apellidos")
-                        .HasColumnType("int");
+                    b.Property<string>("Apellidos")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Direccion")
-                        .HasColumnType("int");
+                    b.Property<string>("Direccion")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Discriminator")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Nombres")
-                        .HasColumnType("int");
+                    b.Property<string>("Nombres")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Telefono")
-                        .HasColumnType("int");
+                    b.Property<string>("Telefono")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 

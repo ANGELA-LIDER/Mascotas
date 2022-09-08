@@ -1,18 +1,17 @@
 using System;
 namespace MascotaFeliz.App.Dominio
 {
-
-public class Mascota
+    public class Mascota
     {
-        public int Id {set; get;}
-        public string Nombre {set; get;}
-        public string Color {set; get;}
-        public string Especie {set; get;}
-        public string Raza {set; get;}
-        public Dueno Dueno {set; get;}
-        public Veterinario Veterinario {set; get;}
-        public Historia Historia {set; get;}
+        public int Id {get;set;}
+        public string Nombres {get;set;}
+        public string Color {get;set;}
+        public string Especie {get;set;}
+        public string Raza {get;set;}
+        public Dueno Dueno {get;set;}
+        public Veterinario Veterinario {get;set;}
+        public Historia Historia {get;set;}
+
 
     }
-
 }

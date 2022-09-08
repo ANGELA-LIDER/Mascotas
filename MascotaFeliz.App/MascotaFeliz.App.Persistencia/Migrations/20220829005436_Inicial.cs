@@ -26,10 +26,10 @@ namespace MascotaFeliz.App.Persistencia.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nombres = table.Column<int>(type: "int", nullable: false),
-                    Apellidos = table.Column<int>(type: "int", nullable: false),
-                    Direccion = table.Column<int>(type: "int", nullable: false),
-                    Telefono = table.Column<int>(type: "int", nullable: false),
+                    Nombres = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Apellidos = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Direccion = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Telefono = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Correo = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     TarjetaProfesional = table.Column<string>(type: "nvarchar(max)", nullable: true)
@@ -45,12 +45,12 @@ namespace MascotaFeliz.App.Persistencia.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    FechaVisita = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Temperatura = table.Column<float>(type: "real", nullable: false),
                     Peso = table.Column<float>(type: "real", nullable: false),
                     FrecuenciaRespiratoria = table.Column<float>(type: "real", nullable: false),
                     FrecuenciaCardiaca = table.Column<float>(type: "real", nullable: false),
                     EstadoAnimo = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    FechaVisita = table.Column<DateTime>(type: "datetime2", nullable: false),
                     IdVeterinario = table.Column<int>(type: "int", nullable: false),
                     Recomendaciones = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     HistoriaId = table.Column<int>(type: "int", nullable: true)
@@ -72,7 +72,7 @@ namespace MascotaFeliz.App.Persistencia.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Nombres = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Color = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Especie = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Raza = table.Column<string>(type: "nvarchar(max)", nullable: true),
