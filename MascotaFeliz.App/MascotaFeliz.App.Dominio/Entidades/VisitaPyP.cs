@@ -1,21 +1,16 @@
 using System;
-using System.Collections.Generic;
 namespace MascotaFeliz.App.Dominio
 {
-
-public class VisitaPyP
+    public class VisitaPyP
     {
-        public int Id {set; get;}
-        public float Temperatura {set; get;}        
-        public float Peso {set; get;}
-        public float FrecuenciaRespiratoria {set; get;}
-        public float FrecuenciaCardiaca {set; get;}
-        public string EstadoAnimo {set; get;}
-        public DateTime FechaVisita {set; get;}
-        public int IdVeterinario {set; get;}
-        public string Recomendaciones {set; get;}
-        
-
+    public int Id {get;set;}
+    public DateTime FechaVisita {get;set;}
+    public float Temperatura {get;set;}
+    public float Peso {get;set;}
+    public float FrecuenciaRespiratoria {get;set;}
+    public float FrecuenciaCardiaca {get;set;}
+    public string EstadoAnimo {get;set;}
+    public int IdVeterinario {get;set;}
+    public string Recomendaciones {get;set;}
     }
-
 }

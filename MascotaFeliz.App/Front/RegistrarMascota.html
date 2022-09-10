@@ -4,12 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EsmeraldaRegistrarMascota</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css">
+    <title>EsmeraldaRegistrarMascotas</title>
 </head>
+
 <body>
-    <h1>Registar Mascota</h1>
-    <img src="test/EviEsmeralda.jpeg" alt="no pude cargar imagen">
-    
-    
+    <header>
+
+      <nav>
+        Esme Aqui
+      </nav>
+
+
+    </header>
+
+    <section class="block-form">
+      <!-- dentro de este va la imagen de cabecera -->
+      <div class="header-form">
+          <img src="images/registrar-mascota.png" alt="">
+      </div>
+      <!-- dentro de este va el formulario -->
+      <div class="container-form">
+          <form action="" method="post">
+              <!-- en este form va nuestro contenido de etiquetas inputs botones -->
+              
+              <div class="row-form">
+                  <label for="idNombre">Nombre:</label>
+                  <input id="idNombre" class="textBox" type="text">                
+              </div>                    
+              <div class="row-form">
+                  <label for="idColor">Color:</label>
+                  <input id="idColor" class="textBox" type="text">                
+              </div>  
+              <div class="row-form">
+                <label for="idEspecie">Especie:</label>
+                <input id="idEspecie" class="textBox" type="text">                
+            </div>
+            <div class="row-form">
+              <label for="idRaza">Raza:</label>
+              <input id="idRaza" class="textBox" type="text">                
+          </div>                     
+            <div class="row-form">
+                <label for="idDueno">Dueño:</label>
+                <select name="select" id="idDueno">
+                  <option value="value1">Emilton Mendoza Ojeda</option>
+                  <option value="value2" selected>Esneider Mendez</option>
+                  <option value="value3">Leonardo Suarez</option>
+                </select> 
+            </div>  
+            <div class="row-form">
+              <label for="idVeterinario">Veterinario:</label>
+              <select name="select" id="idDueno">
+                <option value="value1">Esmeralda Ardila</option>
+                <option value="value2" selected>Angela Gómez</option>
+                <option value="value3">Leonardo Suárez</option>
+              </select> 
+          </div> 
+                            
+                           
+              <div class="row-form">
+                  <!-- coloco un contenedor vacio al principo y al final para que centre y no tener que hacer otra clase -->
+                  <div></div>
+                  <button class="main-button" type="submit">Registrar</button>
+                  <div></div>
+              </div>                
+          </form>
+      </div>
+  </section>
+
+  <footer>
+
+  </footer>
 </body>
 </html>

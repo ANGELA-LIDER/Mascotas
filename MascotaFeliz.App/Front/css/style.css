@@ -32,9 +32,11 @@ header nav{
     font-size: 30px;
     /*display activa las opciones de justificado*/
     display: flex;
+    
     /*aling centra verticalmente*/
     align-items: center;
-    /*aling centra horizontal*/
+    
+    /*justity centra horizontalmente*/
     justify-content: center;
 }
 
@@ -85,7 +87,6 @@ label{
     height: 1.5rem;
 }
 
-
 .main-button{
     border: 0px;
     border-radius: 10rem;
@@ -103,12 +104,6 @@ label{
     /*font-weight: 900;*/
     cursor: pointer;
 }
-
-#Centrado{
-text-align: center;
-
-}
-
 select{
     border: 0px;
     border-radius: 00.25rem;
