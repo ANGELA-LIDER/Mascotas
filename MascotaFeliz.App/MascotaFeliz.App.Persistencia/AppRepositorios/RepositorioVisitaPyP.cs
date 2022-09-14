@@ -1,4 +1,3 @@
-/*
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,25 +25,47 @@ public RepositorioVisitaPyP(AppContext appContext)
                                                                                                  
 public VisitaPyP AddVisitaPyP(VisitaPyP visitaPyP)
 {
-   var historiaAdicionado = _appContext.VisitasPyP.Add(visitaPyP);
+   var visitaPyPAdicionado = _appContext.VisitasPyP.Add(visitaPyP);
    _appContext.SaveChanges();   
-   return historiaAdicionado.Entity;
+   return visitaPyPAdicionado.Entity;
 }
 
-public void DeletVisitaPyP(int idVisitaPyP)
+public VisitaPyP GetVisitaPyP(int idVisitaPyP)
 {
- var historiaEncontrado = _appContext.VisitaPyP.FirstOrDefault(v => v.Id == idVisitaPyP);
-                                  
+    return _appContext.VisitasPyP.FirstOrDefault(v => v.Id == idVisitaPyP);
+}
+
+
+public VisitaPyP UpdateVisitaPyP(VisitaPyP visitaPyP)
+{
+    var visitaEncontrado = _appContext.VisitasPyP.FirstOrDefault(v => v.Id == visitaPyP.Id);
+if (visitaEncontrado != null)
+{
+
+    visitaEncontrado.FechaVisita = visitaPyP.FechaVisita;
+    visitaEncontrado.Temperatura = visitaPyP.Temperatura;
+    visitaEncontrado.Peso = visitaPyP.Peso;
+    visitaEncontrado.FrecuenciaRespiratoria = visitaPyP.FrecuenciaRespiratoria;
+    visitaEncontrado.FrecuenciaCardiaca = visitaPyP.FrecuenciaCardiaca;
+    visitaEncontrado.EstadoAnimo = visitaPyP.EstadoAnimo;
+    visitaEncontrado.IdVeterinario = visitaPyP.IdVeterinario;
+    visitaEncontrado.Recomendaciones = visitaPyP.Recomendaciones;
+  
+    _appContext.SaveChanges();
+}
+   return visitaEncontrado;
+
+  }
+
+  public void DeletVisitaPyP(int idVisitaPyP)
+{
+ var visitaEncontrado = _appContext.VisitasPyP.FirstOrDefault(v => v.Id == idVisitaPyP);
+                                                                       
    return;
-_appContext.VisitaPyP.Remove(historiaEncontrado);
+_appContext.VisitasPyP.Remove(visitaEncontrado);
 _appContext.SaveChanges();
 }
-
-public IEnumerable<VisitaPyP> GetAllVisitaPyP()
-{
-    return GetAllVisitaPyP();
-}
-
+/*
 public IEnumerable<VisitaPyP> GetVeterinariosPorFiltro(string filtro)
 {
     var visitaPyP = GetAllVisitaPyP(); // obtiene todos los saludos
@@ -58,29 +79,17 @@ public IEnumerable<VisitaPyP> GetVeterinariosPorFiltro(string filtro)
       return historias;
 }
 
-          public IEnumerable<VisitaPyP> GetAllVisitaPyPs_()
+public IEnumerable<VisitaPyP> GetAllVisitaPyPs_()
 {
     return _appContext.VisitaPyP;
 }
 
-           public VisitaPyP GetVisitaPyP(int idVisitaPyP)
+public IEnumerable<VisitaPyP> GetAllVisitaPyP()
 {
-    return _appContext.VisitaPyP.FirstOrDefault(v => v.Id == idVisitaPyP);
+    return GetAllVisitaPyP();
 }
+*/
 
-            public VisitaPyP UpdateVisitaPyP(VisitaPyP visitaPyP)
-{
-    var historiaEncontrado = _appContext.VisitaPyP.FirstOrDefault(v => v.Id == visitaPyP.Id);
-if (historiaEncontrado != null)
-{
-    historiaEncontrado.FechaInicial = visitaPyP.FechaInicial;
-    historiaEncontrado.VisitaPyP = visitaPyP.VisitaPyP;
-   
-    _appContext.SaveChanges();
-}
-   return historiaEncontrado;
-
-  }
  } 
  }
- */
+ 
