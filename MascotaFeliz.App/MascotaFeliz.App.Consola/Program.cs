@@ -11,38 +11,35 @@ namespace MascotaFeliz.App.Consola
             _repoDueno = new RepositorioDueno(new Persistencia.AppContext());
 
         private static IRepositorioVeterinario
-            _repoVeterinario =
-                new RepositorioVeterinario(new Persistencia.AppContext());
+            _repoVeterinario = new RepositorioVeterinario(new Persistencia.AppContext());
 
         private static IRepositorioMascota
-            _repoMascota =
-                new RepositorioMascota(new Persistencia.AppContext());
+            _repoMascota = new RepositorioMascota(new Persistencia.AppContext());
 
         private static IRepositorioHistoria
-            _repoHistoria =
-                new RepositorioHistoria(new Persistencia.AppContext());
+            _repoHistoria = new RepositorioHistoria(new Persistencia.AppContext());
 
         private static IRepositorioVisitaPyP
-            _repoVisitaPyP =
-                new RepositorioVisitaPyP(new Persistencia.AppContext());
+            _repoVisitaPyP = new RepositorioVisitaPyP(new Persistencia.AppContext());
 
         static void Main(string[] args)
         {
             Console
-                .WriteLine("hola leo vamos a empezar a trabajar con las tablas ");
+                .WriteLine("hola equipo vamos a empezar a trabajar con las tablas ");
 
-            AddDueno();
-            BuscarDueno(1);
+            /* AddDueno();
+            BuscarDueno(1); */
+            UpdateDueno();
             
 
-            AddVeterinario();
+            /* AddVeterinario();
             BuscarVeterinario(2);
 
             AddMascota();
             BuscarMascota(2);
 
             AddHistoria();
-            BuscarHistoria(3);
+            BuscarHistoria(3); */
 
             //AddVisitaPyP();
             //ListarDuenoFiltro();
@@ -64,6 +61,18 @@ namespace MascotaFeliz.App.Consola
                 };
             _repoDueno.AddDueno (dueno);
         }
+        private static void UpdateDueno()
+        {
+            var dueno = new Dueno {
+                    Id = 1,
+                    Nombres = "esneider",
+                    Apellidos = "Mendez",
+                    Direccion = "calle 123",
+                    Telefono = "3122548036",
+                    Correo = "mendezmendez@gmail.com"
+                };
+            _repoDueno.UpdateDueno(dueno);
+        }
 
         private static void BuscarDueno(int idDueno)
         {
@@ -79,6 +88,11 @@ namespace MascotaFeliz.App.Consola
                 " " +
                 dueno.Correo);
         }
+        /* private static void DeleteDueno(int idDueno)
+        {
+            var dueno = _repoDueno.DeleteDueno(idDueno);
+            Console.WriteLine("Usuario eliminado con el Id: "+ idDueno);
+        } */
 
         private static void AddVeterinario()
         {
